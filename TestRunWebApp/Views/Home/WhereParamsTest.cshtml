@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "WhereParamsTest";
+
+	var pageSizeItems = new string[] { "10", "20", "30", "50", "100" };
+
+}
+
+<h2>WhereParamsTest</h2>
+
+@Html.BsDropDownList("pageSize", pageSizeItems, new { @class = "input-sm", style = "width: 70px" })

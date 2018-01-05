@@ -1,0 +1,21 @@
+﻿@model TestRunWebApp.Models.HtmlViewModel
+
+@{
+    ViewBag.Title = "HtmlTest";
+    
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.BsTextAreaFor(m => m.Content)
+    <button type="submit">Save</button>
+}
+
+
+@Html.ValidationSummary(null, new { data_valmsg_summary = "" })
+
+
+<div>BackUrl: @Html.BackUrl()</div>
+<div>BackUrl: @Html.BackUrl()</div>

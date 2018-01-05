@@ -1,0 +1,23 @@
+﻿
+@{
+	ViewBag.Title = "HtmlExcelExport";
+
+
+	var items = new Dictionary<int, string> { { 1, "OK" } };
+
+	var list = new[] {
+		new TestParamsViewModel {
+			InvoicePrefix = "<h1>",
+			ModifyBy = 1,
+		},
+	};
+	}
+
+
+@(Html.ExcelExport(list)
+	.Column(x => Html.ShowDate(x.ModifyDate), "修改時間")
+	.Column(x => x.InvoicePrefix)
+	.Column(x => Html.ShowItem(x.ModifyBy, items))
+	.Ignore(x => x.ModifyDate2)
+)
+

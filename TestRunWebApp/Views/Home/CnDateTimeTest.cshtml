@@ -1,0 +1,18 @@
+﻿@model TestRunWebApp.Models.TestParamsViewModel
+
+@{
+    ViewBag.Title = "CnDateTimeTest";
+    
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.BsCnDateBoxFor(m => m.ModifyDate)
+    @Html.BsCnDateBoxFor(m => m.ModifyDate2)
+    @Html.BsCnDateBox("ModifyDate3", DateTime.Now)
+    @Html.BsCnDateBox("ModifyDate4", new DateTime(2016, 2, 29))
+    <button type="submit">Save</button>
+}
+

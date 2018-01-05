@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60D358FA-1C5D-4975-83F7-C8A971052A65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orion.Mvc</RootNamespace>
+    <AssemblyName>Orion.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\WebApplication2\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Orion.Mvc.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Orion.Mvc.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Orion.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Orion.API.1.0.0\lib\net45\Orion.API.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ActAuthorizeAttribute.cs" />
+    <Compile Include="CultureHandle.cs" />
+    <Compile Include="Attributes\SearchRememberAttribute.cs" />
+    <Compile Include="Filters\PageParamsActionFilter.cs" />
+    <Compile Include="Html\Bootstrap\BsCnDatetimeExtensions.cs" />
+    <Compile Include="Html\HtmlExcelExport.cs" />
+    <Compile Include="HttpErrorHandler.cs" />
+    <Compile Include="ModelBinder\CnDateTimeModelBinder.cs" />
+    <Compile Include="ModelBinder\StringTrimModelBinder.cs" />
+    <Compile Include="Html\Bootstrap\BsCheckboxRadioExtensions.cs" />
+    <Compile Include="Html\Bootstrap\BsLabelExtensions.cs" />
+    <Compile Include="Html\Bootstrap\BsSelectDictionaryExtensions.cs" />
+    <Compile Include="Html\Bootstrap\BsInputExtensions.cs" />
+    <Compile Include="Html\Bootstrap\BsSelectExtensions.cs" />
+    <Compile Include="Html\Bootstrap\BsTextAreaExtensions.cs" />
+    <Compile Include="Html\Bootstrap\BsDatetimeExtensions.cs" />
+    <Compile Include="Security\IIdentityExtensions.cs" />
+    <Compile Include="Filters\ExceptionMessageActionFilter.cs" />
+    <Compile Include="Extensions\ControllerExtensions.cs" />
+    <Compile Include="Security\IPrincipalExtensions.cs" />
+    <Compile Include="Html\CheckboxRadioExtensions.cs" />
+    <Compile Include="Html\SelectDictionaryExtensions.cs" />
+    <Compile Include="Html\HelperExtensions.cs" />
+    <Compile Include="Html\HelperUtils.cs" />
+    <Compile Include="Html\PaginationExtensions.cs" />
+    <Compile Include="Filters\JsonNetActionFilter.cs" />
+    <Compile Include="Filters\JsonNetResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Filters\UseViewPageActionFilter.cs" />
+    <Compile Include="Attributes\UseViewPageAttribute.cs" />
+    <Compile Include="Security\ISignInManager.cs" />
+    <Compile Include="Security\ISignInStore.cs" />
+    <Compile Include="Security\JwUserIdentity.cs" />
+    <Compile Include="Security\SignInManager.cs" />
+    <Compile Include="Security\SignInStoreCookie.cs" />
+    <Compile Include="Security\SignInStoreSession.cs" />
+    <Compile Include="SessionStateControllerFactory.cs" />
+    <Compile Include="UI\IBreadcrumb.cs" />
+    <Compile Include="UI\BreadcrumbProvider.cs" />
+    <Compile Include="UI\MenuItem.cs" />
+    <Compile Include="UI\MenuProvider.cs" />
+    <Compile Include="ModelBinder\WhereParamsModelBinder.cs" />
+    <Compile Include="ModelBinder\WhereParamsModelBinderProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Install.ps1" />
+    <None Include="Orion.Mvc.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="docs\Breadcrumb.config.sample" />
+    <Content Include="docs\Menu.config.sample" />
+    <EmbeddedResource Include="UI\menus.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <Content Include="web.config.transform" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

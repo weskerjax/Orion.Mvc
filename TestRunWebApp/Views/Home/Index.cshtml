@@ -1,0 +1,21 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+
+	var pages = new[] {
+		"WhereParamsTest",
+		"TimeSpanTest",
+		"EnumCheckboxTest",
+		"CnDateTimeTest",
+		"CnDateTimeTest2",
+		"BsRadioList",
+		"ListBsRadioList",
+	};
+}
+
+<ul>
+	@foreach (var page in pages)
+	{
+		<li><a href="@Url.Action(page)">@page</a></li>
+	}
+</ul>
+

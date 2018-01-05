@@ -1,0 +1,8 @@
+﻿@model TestParamsViewModel
+@{
+    ViewBag.Title = "EnumCheckboxTest";
+}
+
+<h2>EnumCheckboxTest</h2>
+
+@Html.BsEnumCheckboxListFor(m => m.Floor, new { @class = "checkbox-inline", Editable = false })

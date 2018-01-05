@@ -1,0 +1,22 @@
+﻿@model TestRunWebApp.Models.TestParamsViewModel
+
+@{
+	ViewBag.Title = "BsBoolRadioList";
+
+
+	var selectList = new[] {
+
+		new SelectListItem { Value = "Y", Text = "Y", Disabled = true },
+		new SelectListItem { Value = "N", Text = "N" },
+	};
+
+}
+
+@using (Html.BeginForm())
+{
+	@Html.DropDownListFor(x => x.InvoicePrefix, selectList)
+	<button type="submit">Save</button>
+}
+
+
+

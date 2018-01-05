@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "BsRadioList";
+
+    var items = new Dictionary<string, string> { 
+        {"W", "W"},
+        {"B", "B"},
+    };
+    
+}
+
+@Html.BsRadioList("var", items, new { @class = "radio-inline" })
+
