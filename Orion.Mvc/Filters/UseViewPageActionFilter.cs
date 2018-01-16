@@ -20,7 +20,8 @@ namespace Orion.Mvc.Filters
 			if (attr == null) { return; }
 
 			if (attr.Title.HasText()) { result.ViewBag.Title = attr.Title; }
-			result.ViewName = attr.ViewName;
+
+			if (result.ViewName.NoText()) { result.ViewName = attr.ViewName; }
 		}
 
 	}
