@@ -201,7 +201,7 @@ namespace Orion.Mvc.Html
 			if (days < 30) { return days + " 天前"; }
 			if (days < 360) { return (days / 30) + " 個月前"; }
 
-			return (days / 360) + " 年前";
+			return (DateTime.Now.Year - datatime.Value.Year) + " 年前";
 		}
 
 
