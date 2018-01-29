@@ -185,46 +185,24 @@ namespace Orion.Mvc.Html
 
 
 		/// <summary>顯示活動時間</summary>
-		public static MvcHtmlString ShowLiveTime(this HtmlHelper helper, DateTime? datatime)
+		public static string ShowLiveTime(this HtmlHelper helper, DateTime? datatime)
 		{
 			if (datatime == null) { return null; }
 
-			string liveTime;
-			long diff = (long)(DateTime.Now - datatime.Value).TotalSeconds;
+			var diff = DateTime.Now - datatime.Value;
+			long seconds = (long)diff.TotalSeconds;
+			long minutes = (long)diff.TotalMinutes;
+			long hours = (long)diff.TotalHours;
+			long days = (long)diff.TotalDays;
 
-			if (diff < 60)
-			{
-				liveTime = diff + " 秒前";
-			}
-			else if (diff < 3600) /* 1小時 */
-			{ 
-				liveTime = (diff / 60) + " 分鐘前";
-			}
-			else if (diff < 86400) /* 1天 */
-			{ 
-				liveTime = (diff / 3600) + " 小時前";
-			}
-			else if (diff < 604800) /* 7天 */
-			{ 
-				liveTime = (diff / 86400) + " 天前";
-			}
-			else if (diff < 5184000) /* 60天  */
-			{ 
-				liveTime = string.Format("{0:M月d日}", datatime);
-			}
-			else
-			{
-				liveTime = string.Format("{0:yyyy-M-d}", datatime);
-			}
+			if (seconds < 60) { return seconds + " 秒前"; }
+			if (minutes < 60) { return minutes + " 分鐘前"; }
+			if (hours < 24) { return hours + " 小時前"; }
+			if (days < 30) { return days + " 天前"; }
+			if (days < 360) { return (days / 30) + " 個月前"; }
 
-			var span = new TagBuilder("span");
-			span.Attributes["class"] = "live-time";
-			span.Attributes["title"] = string.Format(HelperUtils.DatetimeFormat, datatime);
-			span.InnerHtml = liveTime;
-
-			return new MvcHtmlString(span.ToString(TagRenderMode.Normal));
+			return (days / 360) + " 年前";
 		}
-
 
 
 
